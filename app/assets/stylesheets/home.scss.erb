@@ -1,0 +1,75 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'config/mixins';
+@import 'config/variables';
+
+.landing-container {
+	display: block;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: url(<%= asset_path 'background-3.jpg' %>) no-repeat;
+    background-size: cover;
+}
+
+.landing-box {
+	@include box-sizing(border-box);
+	display: block;
+	width: 50%;
+	margin: calc(40% - 20%) auto;
+	height: 20%;
+	background-color: #eeeeee;
+
+	@include breakpoint(mobile-only) {
+        width: 100%;
+    }
+
+    @include breakpoint(tablet-range) {
+        width: 75%;
+    }
+
+    @include breakpoint(desktop-range) {
+        width: 75%;
+    }
+
+    @include breakpoint(large-desktop-range) {
+        width: 40%;
+    }
+}
+
+header {
+	width: 100%;
+
+	a {
+		width: 100%;
+		text-decoration: none;
+	}
+
+    h1 {
+    	width: 100%;
+    	@include display-flex();
+    	@include align-items(center);
+    	color: #000000;
+    	text-transform: uppercase;
+    	justify-content: center;
+    }
+
+    .fa-stack {
+    	font-size: 1.5rem;
+    }
+
+    .text {
+    	font-size: 3rem;
+    }
+
+    .fa-circle {
+        color: #EE5921;
+        cursor: pointer;
+    }
+
+    .fa-area-chart {
+        color: #eeeeee;
+        cursor: pointer;
+    }
+}
