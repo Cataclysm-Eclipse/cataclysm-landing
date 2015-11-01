@@ -9,7 +9,7 @@
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	background: url(<%= asset_path 'background-3.jpg' %>) no-repeat;
+	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(<%= asset_path 'background-3.jpg' %>) no-repeat;
     background-size: cover;
 }
 
@@ -19,7 +19,6 @@
 	width: 50%;
 	margin: calc(40% - 20%) auto;
 	height: 20%;
-	background-color: #eeeeee;
 
 	@include breakpoint(mobile-only) {
         width: 100%;
@@ -44,6 +43,8 @@ header {
 	a {
 		width: 100%;
 		text-decoration: none;
+        pointer-events: none;
+        cursor: default;
 	}
 
     h1 {
@@ -53,6 +54,7 @@ header {
     	color: #000000;
     	text-transform: uppercase;
     	justify-content: center;
+        font-weight: 100;
     }
 
     .fa-stack {
@@ -71,5 +73,8 @@ header {
     .fa-area-chart {
         color: #eeeeee;
         cursor: pointer;
+    }
+    p {
+        text-align: center;
     }
 }
