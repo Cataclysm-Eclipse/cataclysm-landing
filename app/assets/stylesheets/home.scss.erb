@@ -7,31 +7,34 @@
 .section-01 {
     width: 100%;
     height: 100%;
-    background: url(<%= asset_path 'back.jpg' %>) no-repeat; // mito-pattern-light-blue
+    background: url(<%= asset_path 'blue-background.jpg' %>) no-repeat; // mito-pattern-light-blue
     background-size: cover;
 
     .logo {
         position: relative;
-        top: 41.5%;
         left: 50%;
         transform: translate(-50%,-50%);
 
         @include breakpoint(mobile-only) {
             width: 75%;
+            top: 41.5%;
         }
         @include breakpoint(tablet-range) {
             width: 40%;
+            top: 43.75%;
         }
         @include breakpoint(desktop-range) {
             width: 30%;
+            top: 43.75%;
         }
         @include breakpoint(large-desktop-range) {
             width: 25%;
+            top: 45.25%;
         }
     }
 }
 
-.dropdown-area {
+.text-banner {
     @include dark-box-shadow;
     position: absolute;
     bottom: 2.5%;
