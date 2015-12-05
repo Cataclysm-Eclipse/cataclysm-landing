@@ -16,26 +16,25 @@
         transform: translate(-50%,-50%);
 
         @include breakpoint(mobile-only) {
-            width: 75%;
-            top: 41.5%;
+            top: 35%;
+            height: 45%;
         }
         @include breakpoint(tablet-range) {
-            width: 40%;
             top: 43.75%;
+            height: 40%;
         }
         @include breakpoint(desktop-range) {
-            width: 30%;
             top: 43.75%;
+            height: 50%;
         }
         @include breakpoint(large-desktop-range) {
-            width: 25%;
             top: 45.25%;
+            height: 55%;
         }
     }
 }
 
 .text-banner {
-    @include dark-box-shadow;
     position: absolute;
     bottom: 2.5%;
     width: 100%;
@@ -50,12 +49,13 @@
     }
 
     a {
-        color: #4486AE;
+        color: $blue;
         text-decoration: none;
     }
 
     @include breakpoint(mobile-only) {
-        height: 15%;
+        height: 30%;
+        bottom: 0;
     }
     @include breakpoint(tablet-range) {
         height: 10%;
